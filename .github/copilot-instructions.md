@@ -1,0 +1,5 @@
+- Use this workspace for the Arduino-based replacement project.
+- Keep the codebase small and easy to maintain.
+- Prefer simple, well-known libraries: WiFiManager, ArduinoJson, LittleFS, WebServer, HTTPClient, and a simple Modbus TCP library.
+- Keep the Waveshare ESP32-S3-RS485-CAN board configuration as the baseline.
+- Avoid adding extra dependencies unless the user explicitly asks for them.
