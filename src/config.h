@@ -16,7 +16,7 @@ static constexpr uint32_t CAN_BAUDRATE = 500000;
 static constexpr uint32_t RS485_BAUDRATE = 9600;
 static constexpr char WIFI_CONFIG_FILE[] = "/wifi_config.json";
 static constexpr char WEATHER_API_URL[] = "https://api.openweathermap.org/data/2.5/weather?q=Tromso,no&appid=YOUR_API_KEY&units=metric";
-static constexpr char OWM_API_KEY[] = "YOUR_API_KEY";
+static constexpr char OWM_API_KEY[] = "YOUR_API_KEY"; // Replace with your OpenWeatherMap API key.
 static constexpr char OWM_LOCATION[] = "Tromso,no";
 static constexpr uint32_t SUN_INTERVAL_1D_MS = 24UL * 60UL * 60UL * 1000UL;
 static constexpr uint32_t SUN_INTERVAL_2D_MS = 2UL * SUN_INTERVAL_1D_MS;

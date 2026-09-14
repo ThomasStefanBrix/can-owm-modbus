@@ -6,4 +6,5 @@ namespace WifiManager {
 void begin();
 void loop();
 bool isConnected();
+String getLocalIP();
 }

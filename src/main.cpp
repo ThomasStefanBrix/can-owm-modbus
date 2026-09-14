@@ -1,7 +1,6 @@
 #include <Arduino.h>
 #include <LittleFS.h>
 
-#include "app_config.h"
 #include "config.h"
 #include "modbus_server.h"
 #include "owm_client.h"
@@ -12,7 +11,6 @@ namespace {
 OWMClient owmClient;
 ModbusServer modbusServer;
 unsigned long lastWeatherFetch = 0;
-AppConfig::Data appConfig;
 }
 
 void setup() {
@@ -26,11 +24,9 @@ void setup() {
         Serial.println("LittleFS mount failed");
     }
 
-    appConfig = AppConfig::defaults();
-    AppConfig::load(appConfig);
-
     WifiManager::begin();
-    owmClient.begin(appConfig.owmApiKey, appConfig.owmLocation);
+    owmClient.begin(Config::OWM_API_KEY, Config::OWM_LOCATION);
+    WebServerApp::setOwmClient(&owmClient);
     modbusServer.begin();
     WebServerApp::begin();
 }
